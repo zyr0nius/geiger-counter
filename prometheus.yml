@@ -1,0 +1,27 @@
+
+global:
+  scrape_interval:     60s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 60s # By default, scrape targets every 15 seconds.
+  external_labels:
+      monitor: 'external'
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+  - job_name: 'prometheus'
+
+    scrape_interval: 60s
+    scrape_timeout: 60s
+
+    static_configs:
+    - targets: ['localhost:9090']
+
+  - job_name: environment
+    static_configs:
+    - targets: ['localhost:8000']
+      labels:
+        group: 'environment'
+        location: 'Athens'
+
