@@ -1,7 +1,7 @@
 # geiger-counter
 Small script for measuring dose rate in microsievert per hour with RadiationD-v1.1(CAJOE)
 
-This script works with tinkerboard after installing and loading the relevant GPIO library support https://tinker-board.asus.com/doc_tb.html#gpio
+This script works with tinkerboard after installing and loading the relevant GPIO library https://tinker-board.asus.com/doc_tb.html#gpio
 
 It will also work with raspberry pi if you load the raspberry pi GPIO library
 
