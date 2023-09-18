@@ -1,6 +1,10 @@
 # geiger-counter
 Small script for measuring dose rate in microsievert per hour with RadiationD-v1.1(CAJOE)
 
+```
+git clone git@github.com:sedzinfo/geiger-counter.git
+```
+
 This script works with tinkerboard after installing and loading the relevant GPIO library https://tinker-board.asus.com/doc_tb.html#gpio
 
 ```
@@ -22,6 +26,8 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.45.0/promethe
 tar -xzvf prometheus-2.45.0.linux-armv7.tar.gz
 cd prometheus-2.45.0.linux-armv7/
 cp prometheus.yml prometheus.bak
+cd
+cp ~/geiger-counter/prometheus.yml ~/prometheus-2.45.0.linux-armv7/prometheus.yml
 ```
 using the command crontab -e the prometheus server loads on startup automatically, just copy and paste the command bellow after substituding the prometheus directory with the directory you installed prometheus
 
