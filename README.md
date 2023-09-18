@@ -37,6 +37,7 @@ Start the script
 cd geiger-counter/
 python3 geiger.py
 ```
+![Alt text](https://github.com/sedzinfo/geiger-counter/blob/main/script.png)
 Start prometheus
 ```
 sudo /home/linaro/prometheus-2.45.0.linux-armv7/prometheus --config.file=/home/linaro/prometheus-2.45.0.linux-armv7/prometheus.yml --storage.tsdb.retention.time=5y &
