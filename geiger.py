@@ -3,6 +3,7 @@
 
 from datetime import datetime, timedelta
 from prometheus_client import start_http_server, Counter, Gauge
+# import RPi.GPIO as gpio
 import ASUS.GPIO as gpio
 import time
 import os
