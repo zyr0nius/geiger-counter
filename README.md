@@ -17,8 +17,9 @@ It will also work with raspberry pi if you load the raspberry pi GPIO library
 
 It uses prometheus so you will also need to setup a prometheus server localy, more information can be found in https://prometheus.io/. After installing prometheus you will need to edit the prometheus.yml configuration file to configure the server. You may find the prometheus.yml provided here helpful
 ```
+cd
 wget https://github.com/prometheus/prometheus/releases/download/v2.45.0/prometheus-2.45.0.linux-armv7.tar.gz
-
+tar -xzvf prometheus-2.45.0.linux-armv7.tar.gz
 ```
 using the command crontab -e the prometheus server loads on startup automatically, just copy and paste the command bellow after substituding the prometheus directory with the directory you installed prometheus
 
