@@ -2,6 +2,8 @@
 Small script for measuring dose rate in microsievert per hour with RadiationD-v1.1(CAJOE)
 
 ```
+sudo apt-get update
+sudo apt-get install git
 git clone git@github.com:sedzinfo/geiger-counter.git
 ```
 
@@ -9,7 +11,6 @@ This script works with tinkerboard after installing and loading the relevant pyt
 ```
 sudo apt-get update
 sudo apt-get install python-dev python3-dev
-sudo apt-get install git
 git clone http://github.com/TinkerBoard/gpio_lib_python.git
 cd gpio_lib_python/
 sudo python setup.py
