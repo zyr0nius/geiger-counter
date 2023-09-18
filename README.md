@@ -4,7 +4,7 @@ Small script for measuring dose rate in microsievert per hour with RadiationD-v1
 ```
 sudo apt-get update
 sudo apt-get install git
-git clone git@github.com:sedzinfo/geiger-counter.git
+git clone https://github.com/sedzinfo/geiger-counter.git
 ```
 
 This script works with tinkerboard after installing and loading the relevant python GPIO library https://tinker-board.asus.com/doc_tb.html#gpio
