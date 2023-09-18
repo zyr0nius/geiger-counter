@@ -6,6 +6,7 @@ This script works with tinkerboard after installing and loading the relevant GPI
 ```
 sudo apt-get update
 sudo apt-get install python-dev python3-dev
+sudo apt-get install git
 git clone http://github.com/TinkerBoard/gpio_lib_python.git
 cd gpio_lib_python/
 sudo python setup.py
