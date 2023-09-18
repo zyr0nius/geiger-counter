@@ -73,7 +73,7 @@ The configuration bellow will startup prometheus and the python script automatic
 # m h  dom mon dow   command
 
 @reboot sudo /home/linaro/prometheus-2.45.0.linux-armv7/prometheus --config.file=/home/linaro/prometheus-2.45.0.linux-armv7/prometheus.yml --storage.tsdb.retention.time=5y &
-@reboot sudo python3 /home/linaro/geiger-counter/geiger.py
+@reboot sudo python3 /home/linaro/geiger-counter/geiger.py &
 ```
 
 Finally you need to create a grafana account and use the grafana_configuration.json to create the graphs shown bellow
