@@ -45,7 +45,7 @@ Open a crontab
 ```
 crontab -e
 ```
-The configuration bellow will startup prometheus and the python script automatically on system start
+The configuration bellow will startup prometheus and the script automatically on system start
 
 ```
 # Edit this file to introduce tasks to be run by cron.
