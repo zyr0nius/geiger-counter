@@ -5,8 +5,7 @@ Small script for measuring dose rate in microsievert per hour with RadiationD-v1
 git clone git@github.com:sedzinfo/geiger-counter.git
 ```
 
-This script works with tinkerboard after installing and loading the relevant GPIO library https://tinker-board.asus.com/doc_tb.html#gpio
-
+This script works with tinkerboard after installing and loading the relevant python GPIO library https://tinker-board.asus.com/doc_tb.html#gpio
 ```
 sudo apt-get update
 sudo apt-get install python-dev python3-dev
@@ -18,6 +17,9 @@ sudo python3 setup.py install
 ```
 
 It will also work with raspberry pi if you load the raspberry pi GPIO library
+```
+pip install RPi.GPIO
+```
 
 It uses prometheus so you will also need to setup a prometheus server localy, more information can be found in https://prometheus.io/. After installing prometheus you will need to edit the prometheus.yml configuration file to configure the server. You may find the prometheus.yml provided here helpful
 ```
