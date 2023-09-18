@@ -32,7 +32,20 @@ cp prometheus.yml prometheus.bak
 cd
 cp ~/geiger-counter/prometheus.yml ~/prometheus-2.45.0.linux-armv7/prometheus.yml
 ```
-using the command crontab -e the prometheus server loads on startup automatically, just copy and paste the command bellow after substituding the prometheus directory with the directory you installed prometheus
+Start the script
+```
+cd geiger-counter/
+python3 geiger.py
+```
+Start prometheus
+```
+sudo /home/linaro/prometheus-2.45.0.linux-armv7/prometheus --config.file=/home/linaro/prometheus-2.45.0.linux-armv7/prometheus.yml --storage.tsdb.retention.time=5y &
+```
+Open a crontab
+```
+crontab -e
+```
+Copy the command bellow if you want to startup prometheus automatically every time the system boots
 
 ```
 # Edit this file to introduce tasks to be run by cron.
@@ -60,6 +73,7 @@ using the command crontab -e the prometheus server loads on startup automaticall
 # m h  dom mon dow   command
 
 @reboot sudo /home/linaro/prometheus-2.45.0.linux-armv7/prometheus --config.file=/home/linaro/prometheus-2.45.0.linux-armv7/prometheus.yml --storage.tsdb.retention.time=5y &
+@reboot sudo python3 /home/linaro/geiger-counter/geiger.py
 ```
 
 Finally you need to create a grafana account and use the grafana_configuration.json to create the graphs shown bellow
