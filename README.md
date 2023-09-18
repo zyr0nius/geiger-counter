@@ -20,6 +20,8 @@ It uses prometheus so you will also need to setup a prometheus server localy, mo
 cd
 wget https://github.com/prometheus/prometheus/releases/download/v2.45.0/prometheus-2.45.0.linux-armv7.tar.gz
 tar -xzvf prometheus-2.45.0.linux-armv7.tar.gz
+cd prometheus-2.45.0.linux-armv7/
+cp prometheus.yml prometheus.bak
 ```
 using the command crontab -e the prometheus server loads on startup automatically, just copy and paste the command bellow after substituding the prometheus directory with the directory you installed prometheus
 
